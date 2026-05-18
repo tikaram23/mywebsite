@@ -3,178 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tikaram Gorathoki Portfolio</title>
 
-    <title>Tikaram Portfolio</title>
-
-    <style>
-
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, sans-serif;
-        }
-
-        body{
-            color:white;
-
-            background:
-            linear-gradient(rgba(0,0,0,0.7),
-            rgba(0,0,0,0.7)),
-            url("https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop");
-
-            background-size:cover;
-            background-position:center;
-            background-attachment:fixed;
-        }
-
-        /* Header */
-        header{
-            width:100%;
-            padding:20px 10%;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            background:rgba(0,0,0,0.5);
-            position:fixed;
-            top:0;
-        }
-
-        .logo{
-            color:#00bfff;
-            font-size:35px;
-        }
-
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin-left:20px;
-            font-size:18px;
-            transition:0.3s;
-        }
-
-        nav a:hover{
-            color:#00bfff;
-        }
-
-        /* Home */
-        .home{
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px;
-        }
-
-        .home-content h3{
-            font-size:35px;
-        }
-
-        .home-content h1{
-            font-size:70px;
-            color:#00bfff;
-            margin:15px 0;
-        }
-
-        .home-content h2{
-            font-size:40px;
-            margin-bottom:20px;
-        }
-
-        .home-content p{
-            font-size:22px;
-            margin-bottom:30px;
-        }
-
-        /* Button */
-        .btn{
-            padding:12px 30px;
-            background:#00bfff;
-            color:white;
-            text-decoration:none;
-            border-radius:6px;
-            font-size:18px;
-            transition:0.3s;
-        }
-
-        .btn:hover{
-            background:#009acd;
-        }
-
-        /* About */
-        .about{
-            padding:100px 10%;
-            text-align:center;
-            background:rgba(0,0,0,0.7);
-        }
-
-        .about h2{
-            font-size:45px;
-            margin-bottom:30px;
-            color:#00bfff;
-        }
-
-        .about p{
-            font-size:22px;
-            line-height:1.8;
-        }
-
-        /* Contact */
-        .contact{
-            padding:100px 10%;
-            text-align:center;
-        }
-
-        .contact h2{
-            font-size:45px;
-            margin-bottom:30px;
-            color:#00bfff;
-        }
-
-        form{
-            max-width:600px;
-            margin:auto;
-        }
-
-        form input,
-        form textarea{
-            width:100%;
-            padding:15px;
-            margin:10px 0;
-            border:none;
-            border-radius:5px;
-            font-size:16px;
-        }
-
-        form textarea{
-            height:150px;
-        }
-
-        form button{
-            padding:12px 30px;
-            background:#00bfff;
-            color:white;
-            border:none;
-            border-radius:5px;
-            cursor:pointer;
-            font-size:18px;
-            transition:0.3s;
-        }
-
-        form button:hover{
-            background:#009acd;
-        }
-
-        /* Footer */
-        footer{
-            text-align:center;
-            padding:20px;
-            background:rgba(0,0,0,0.7);
-            font-size:18px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -185,15 +16,15 @@
         <h1 class="logo">Tikaram</h1>
 
         <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
     </header>
 
     <!-- Home Section -->
-    <section class="home" id="home">
+    <section class="home">
 
         <div class="home-content">
 
@@ -204,59 +35,16 @@
             <h2>Smart Computing Student</h2>
 
             <p>
-                Student ID: 2317391
+                Student ID : 2317391
             </p>
 
-            <a href="#about" class="btn">
+            <a href="about.html" class="btn">
                 About Me
             </a>
 
         </div>
 
     </section>
-
-    <!-- About -->
-    <section class="about" id="about">
-
-        <h2>About Me</h2>
-
-        <p>
-            I am Tikaram Gorathoki, a Smart Computing student.
-            I enjoy programming, web development, and Unity game development.
-            I love creating projects and learning new technologies.
-        </p>
-
-    </section>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-
-        <h2>Contact Me</h2>
-
-        <form>
-
-            <input type="text" placeholder="Your Name" required>
-
-            <input type="email" placeholder="Your Email" required>
-
-            <textarea placeholder="Your Message"></textarea>
-
-            <button type="submit">
-                Send Message
-            </button>
-
-        </form>
-
-    </section>
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-            © 2026 Tikaram Gorathoki | Smart Computing
-        </p>
-
-    </footer>
 
 </body>
 </html>
