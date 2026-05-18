@@ -7,10 +7,11 @@
 
 body{
     color:white;
+
     background:
-    linear-gradient(rgba(0,0,0,0.7),
-    rgba(0,0,0,0.7)),
-    url("https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop");
+    linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop');
 
     background-size:cover;
     background-position:center;
@@ -30,7 +31,7 @@ header{
 }
 
 .logo{
-    color:#00bfff;
+    color:#00ffcc;
     font-size:35px;
 }
 
@@ -39,11 +40,10 @@ nav a{
     text-decoration:none;
     margin-left:20px;
     font-size:18px;
-    transition:0.3s;
 }
 
 nav a:hover{
-    color:#00bfff;
+    color:#00ffcc;
 }
 
 /* Home */
@@ -53,7 +53,6 @@ nav a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
 }
 
 .home-content h3{
@@ -62,8 +61,8 @@ nav a:hover{
 
 .home-content h1{
     font-size:70px;
-    color:#00bfff;
-    margin:15px 0;
+    color:#00ffcc;
+    margin:20px 0;
 }
 
 .home-content h2{
@@ -79,48 +78,57 @@ nav a:hover{
 /* Button */
 .btn{
     padding:12px 30px;
-    background:#00bfff;
-    color:white;
+    background:#00ffcc;
+    color:black;
     text-decoration:none;
-    border-radius:6px;
-    font-size:18px;
-    transition:0.3s;
+    border-radius:5px;
+    display:inline-block;
+    margin-top:20px;
 }
 
 .btn:hover{
-    background:#009acd;
+    background:#00ccaa;
 }
 
 /* About */
-.about{
-    padding:100px 10%;
+.about-page{
+    padding:120px 10%;
     text-align:center;
-    background:rgba(0,0,0,0.7);
 }
 
-.about h2{
-    font-size:45px;
+.about-page h1{
+    font-size:50px;
+    color:#00ffcc;
     margin-bottom:30px;
-    color:#00bfff;
 }
 
-.about p{
-    font-size:22px;
+.about-page p{
+    font-size:24px;
     line-height:1.8;
 }
 
 /* Contact */
-.contact{
-    padding:100px 10%;
+.contact-page{
+    padding:120px 10%;
     text-align:center;
 }
 
-.contact h2{
-    font-size:45px;
+.contact-page h1{
+    font-size:50px;
+    color:#00ffcc;
     margin-bottom:30px;
-    color:#00bfff;
 }
 
+.contact-info{
+    margin-bottom:40px;
+}
+
+.contact-info p{
+    font-size:22px;
+    margin:10px 0;
+}
+
+/* Form */
 form{
     max-width:600px;
     margin:auto;
@@ -136,29 +144,16 @@ form textarea{
     font-size:16px;
 }
 
-form textarea{
-    height:150px;
-}
-
 form button{
     padding:12px 30px;
-    background:#00bfff;
-    color:white;
+    background:#00ffcc;
+    color:black;
     border:none;
     border-radius:5px;
     cursor:pointer;
     font-size:18px;
-    transition:0.3s;
 }
 
 form button:hover{
-    background:#009acd;
-}
-
-/* Footer */
-footer{
-    text-align:center;
-    padding:20px;
-    background:rgba(0,0,0,0.7);
-    font-size:18px;
+    background:#00ccaa;
 }
