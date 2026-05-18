@@ -1,50 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tikaram Gorathoki Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Mono:wght@300&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <link rel="stylesheet" href="style.css">
+    body {
+      background: #0d0d0d;
+      color: #f0ece4;
+      font-family: 'Cormorant Garamond', serif;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 48px;
+      background: rgba(13,13,13,0.7);
+      backdrop-filter: blur(10px);
+    }
+
+    nav .logo {
+      font-size: 1.2rem;
+      letter-spacing: 0.15em;
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      color: #c9b99a;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 36px;
+    }
+
+    nav ul a {
+      color: #f0ece4;
+      text-decoration: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
+
+    nav ul a:hover { opacity: 1; }
+
+    /* ── HERO ── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+      padding-top: 80px;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 60px 80px 80px;
+    }
+
+    .hero-text .tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: #c9b99a;
+      margin-bottom: 24px;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(3rem, 5vw, 5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-text h1 span {
+      font-weight: 600;
+      font-style: italic;
+      color: #c9b99a;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 1.8;
+      opacity: 0.7;
+      max-width: 420px;
+      margin-bottom: 48px;
+    }
+
+    .btn-group { display: flex; gap: 16px; }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .btn-primary {
+      background: #c9b99a;
+      color: #0d0d0d;
+    }
+
+    .btn-primary:hover {
+      background: #f0ece4;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(240,236,228,0.3);
+      color: #f0ece4;
+    }
+
+    .btn-outline:hover {
+      border-color: #c9b99a;
+      color: #c9b99a;
+    }
+
+    /* ── PHOTO ── */
+    .hero-photo {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: grayscale(20%) contrast(1.05);
+      transition: filter 0.5s;
+    }
+
+    .hero-photo img:hover {
+      filter: grayscale(0%) contrast(1);
+    }
+
+    .hero-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(13,13,13,0.4) 0%,
+        transparent 40%
+      );
+      pointer-events: none;
+    }
+
+    /* ── FADE-IN ANIMATION ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-text .tag  { animation: fadeUp 0.8s ease 0.1s both; }
+    .hero-text h1    { animation: fadeUp 0.8s ease 0.25s both; }
+    .hero-text p     { animation: fadeUp 0.8s ease 0.4s both; }
+    .btn-group       { animation: fadeUp 0.8s ease 0.55s both; }
+    .hero-photo      { animation: fadeUp 0.9s ease 0.2s both; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50vh auto;
+      }
+
+      .hero-photo { order: -1; }
+
+      .hero-text {
+        padding: 48px 32px;
+      }
+
+      nav { padding: 20px 24px; }
+    }
+  </style>
 </head>
-
 <body>
 
-    <!-- Header -->
-    <header>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">YourName</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-        <h1 class="logo">Tikaram</h1>
+  <!-- HERO SECTION -->
+  <section class="hero">
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <!-- LEFT: Text -->
+    <div class="hero-text">
+      <p class="tag">✦ Welcome to my space</p>
+      <h1>Hi, I'm <span>Your Name</span></h1>
+      <p>A short line about who you are and what you do. Keep it personal and genuine.</p>
+      <div class="btn-group">
+        <a href="about.html" class="btn btn-primary">About Me</a>
+        <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
 
-    </header>
+    <!-- RIGHT: Your Photo -->
+    <div class="hero-photo">
+      <img src="IMG_7030.jpeg" alt="Your Name" />
+    </div>
 
-    <!-- Home Section -->
-    <section class="home">
-
-        <div class="home-content">
-
-            <h3>Hello, I'm</h3>
-
-            <h1>Tikaram Gorathoki</h1>
-
-            <h2>Smart Computing Student</h2>
-
-            <p>
-                Student ID : 2317391
-            </p>
-
-            <a href="about.html" class="btn">
-                About Me
-            </a>
-
-        </div>
-
-    </section>
+  </section>
 
 </body>
 </html>
